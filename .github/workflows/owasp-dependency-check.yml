@@ -18,7 +18,7 @@ jobs:
         run: |
           eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
           ls -al
-          dependency-check -o reports --prettyPrint --project "Demo Project Terraform" -s . --disableOssIndex
+          dependency-check -o reports --prettyPrint --project "Demo Project Java-False-Positive" -s . --disableOssIndex
           # add --failOnCVSS 7 to break build on CVSS score >=7
       - name: Archive scan report
         uses: actions/upload-artifact@v3

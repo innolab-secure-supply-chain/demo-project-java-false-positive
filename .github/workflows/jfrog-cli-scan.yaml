@@ -31,6 +31,8 @@ jobs:
          echo "JFROG_BUILD_STATUS=FAIL" >> $GITHUB_ENV
        if: failure()
      - name: Publish build
+       env:
+        JFROG_CLI_BUILD_NAME: 'Java maven false positive project new'
        run: |
          # Collect and store environment variables in the build-info
          jfrog rt bce
